@@ -1,6 +1,9 @@
-FROM tomcat:8.5.35-jre10
-COPY target/java-web-app*.war /usr/local/tomcat/webapps/java-web-app.war
-ADD java-web-app.war /usr/local/tomcat/webapps/
+FROM ubuntu:latest
+RUN apt-get -y update && apt-get -y upgrade
+RUN apt-get -y install openjdk-8-jdk wget
+RUN mkdir /usr/local/tomcat/webapps/java-web-app.war
+RUN wget http://www-us.apache.org/dist/tomcat/tomcat-8/v8.5.16/bin/apache-tomcat-8.5.16.tar.gz -O /tmp/tomcat.tar.gz
+RUN cd /tmp && tar xvfz tomcat.tar.gz
+RUN cp -Rv /tmp/apache-tomcat-8.5.16/* /usr/local/tomcat/webapps/java-web-app.war
 EXPOSE 8080
-CMD chmod +x /usr/local/tomcat/bin/catalina.sh
-CMD ["catalina.sh", "run"]
+CMD /usr/local/tomcat/bin/catalina.sh run
