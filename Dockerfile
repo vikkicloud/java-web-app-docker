@@ -1,3 +1,3 @@
 FROM tomcat:9.0.64
-LABEL maintainer="vikkicloud9@gmail.com"
-CMD ["catalina.sh" "run"]
+# Dummy text to test 
+COPY target/java-web-app*.war /usr/local/tomcat/webapps/java-web-app.war
