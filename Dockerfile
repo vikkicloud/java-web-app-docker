@@ -1,5 +1,3 @@
-FROM tomcat:9.0.64
+FROM tomcat:latest
 # Dummy text to test 
-COPY target//usr/vikki/tomcat/webapp* //usr/vikki/tomcat/webapp
-EXPOSE 8080
-CMD ["catalina.sh" "run"]
+COPY target/java-web-app*.war /usr/local/tomcat/webapps/java-web-app.war
