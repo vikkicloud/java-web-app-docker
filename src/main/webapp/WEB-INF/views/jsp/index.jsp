@@ -40,15 +40,15 @@
 
 	<div class="row">
 		<div class="col-md-8">
-			<h2>Welcome To cloudcandy.</h2>
-			<h3>Contact @ +91-9597361516 </h3>
+			<h2>KARTHI BRO FINALLY GOT THE OUTPUT.</h2>
+			<h3>IT TOOK ME 2 DAYS TO SEE THE RESULT </h3>
 		</div>	
 	</div>
 
 
 	<hr>
 	<footer>
-		<p>&copy; cloudcandy 2020</p>
+		<p>&copy; GREENS TECHNOLOGIES</p>
 	</footer>
 </div>
 
